@@ -1,0 +1,35 @@
+// File: StaticExample2.java
+//
+// Author: Rahul Simha
+// Created: August 19, 1998
+// Modified: Sept 2007
+//
+// Static class with non-static members that fails
+// to compile.
+
+public class StaticExample2 {
+
+  static double x;                      // Static data
+
+  static void printx ()                 // Static method
+  {
+    System.out.println ("x = " + x);
+  }
+
+  double y;                             // Non-static data
+
+  void printy ()                        // Non-static method
+  {
+    System.out.println ("y = " + y);
+  }
+
+  public static void main (String[] argv)
+  {
+    x = 5.34;
+    printx ();
+
+    y = 9.67;   // Won't compile
+    printy ();  // Won't compile
+  }
+
+}
